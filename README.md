@@ -1,17 +1,8 @@
-✅ README.md File Content
-markdown
-Copy
-Edit
-# 🗳️ Poll Voting App
-
+🗳️ Poll Voting App
 A simple React-based web application for creating and voting on polls. Users can register, log in, vote, and view poll results. Admins have additional capabilities to create, close, or delete polls.
 
----
-
-## 🚀 Getting Started
-
-### 1. **Clone the Repository**
-```bash
+🚀 Getting Started
+1. Clone the Repository
 git clone https://github.com/yourusername/poll-voting-app.git
 cd poll-voting-app
 2. Install Dependencies
@@ -75,4 +66,4 @@ Vote tracking and poll closing
 Client-side data persistence using localStorage
 
 Responsive and clean UI
-
+portfolio/README.md
