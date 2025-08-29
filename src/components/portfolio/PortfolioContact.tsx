@@ -176,18 +176,7 @@ function PortfolioContact() {
 										className='w-10 h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center transition-colors'>
 										<Linkedin />
 									</a>
-									{/* <a
-										href='https://twitter.com/DheeruRajpoot3'
-										aria-label={`Connect on Twitter`}
-										className='w-10 h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center transition-colors'>
-										<Twitter />
-									</a> */}
-									{/* <a
-										href='https://www.instagram.com/dheeru_rajpoot_/'
-										aria-label={`Connect on Instagram`}
-										className='w-10 h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center transition-colors'>
-										<Instagram />
-									</a> */}
+									
 									<a
 										href='https://github.com/ShivamNishad0'
 										aria-label={`Connect on Github`}
