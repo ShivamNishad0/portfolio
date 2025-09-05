@@ -37,7 +37,10 @@ function PortfolioContact() {
 		setFormState((prev) => ({ ...prev, [name]: value }));
 	};
 
-	
+	const portalId = "242636988";    // your portal ID
+	const formId = "2833a34c-1645-455c-a6b6-78a6e01445bd";  // your form ID
+
+
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 		const { name, email, subject, message } = formState;
@@ -53,7 +56,15 @@ function PortfolioContact() {
 
 
 
-		
+		const response = await axios.post(
+			`https://api-na2.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`,
+			data,
+			{
+				headers: {
+					"Content-Type": "application/json",
+				},
+			}
+		);
 		if (response.status === 200) {
 			setFormState({
 				name: "",
