@@ -30,6 +30,13 @@ function PortfolioAbout() {
 
 	const experiences = [
 		{
+			year: "2025",
+			position: "Full Stack Developer Intern",
+			company: "SmartCard AI",
+			description:
+				"Designed and developed a responsive dashboard for SmartCard AI using React.js and Flask, providing users with a clear and interactive interface. The dashboard includes secure login, API-integrated data visualization, transaction tracking, and AI-driven insights for better decision-making.",
+		},
+		{
 			year: "June, 2024 - July, 2024",
 			position: "Full Stack Developer Intern",
 			company: "Innobyte Services",
