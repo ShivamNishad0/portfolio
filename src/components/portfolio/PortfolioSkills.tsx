@@ -22,7 +22,7 @@ function PortfolioSkills() {
 		{
 			title: "Languages",
 			icon: <Code className='w-5 h-5 text-indigo-400' />,
-			skills: ["JavaScript", "TypeScript"],
+			skills: ["JavaScript", "TypeScript", "CPP", "Python"],
 		},
 		{
 			title: "System",
@@ -32,7 +32,7 @@ function PortfolioSkills() {
 		{
 			title: "Backend",
 			icon: <Server className='w-5 h-5 text-indigo-400' />,
-			skills: ["Node.js", "Express", "REST APIs"],
+			skills: ["Node.js", "Express", "REST APIs", "Python", "JavaScript"],
 		},
 		{
 			title: "Frontend",
@@ -78,7 +78,7 @@ function PortfolioSkills() {
 						{techCategories.map((category, index) => (
 							<Card
 								key={index}
-								className={`bg-gray-900 bg-opacity-70 backdrop-blur-sm border border-gray-800 rounded-xl p-5 md:p-6 hover:border-indigo-500 transition-all duration-500 transform ${
+								className={`bg-gray-900 bg-opacity-70 backdrop-blur-sm border border-gray-800 rounded-xl p-5 md:p-6 hover:border-indigo-500 transition-all duration-500 transform min-h-48 ${
 									isVisible
 										? "translate-y-0 opacity-100"
 										: "translate-y-12 opacity-0"
