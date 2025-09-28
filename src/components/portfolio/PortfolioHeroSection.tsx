@@ -56,7 +56,7 @@ function PortfolioHero() {
 	return (
 		<section
 			id='home'
-			className='relative flex  items-center justify-center w-full bg-black text-white py-18 md:py-24 lg:py-32 overflow-hidden'>
+			className='relative flex  items-center justify-center w-full bg-white dark:bg-black text-black dark:text-white py-18 md:py-24 lg:py-32 overflow-hidden'>
 			<div className='max-w-[768px] w-full xl:max-w-[1080px] flex flex-col items-center md:flex-row md:items-start md:justify-center gap-8 md:gap-12 px-4 sm:px-6 z-10'>
 				{/* Left Content */}
 				<Card
@@ -73,14 +73,14 @@ function PortfolioHero() {
 					</CardHeader>
 
 					<CardBody className='flex flex-col items-center md:items-start w-full bg-transparent p-0'>
-						<h1 className='text-center md:text-left w-full text-4xl text-gray-200 font-bold mb-3 md:mb-4 leading-tight'>
+						<h1 className='text-center md:text-left w-full text-4xl text-gray-800 dark:text-gray-200 font-bold mb-3 md:mb-4 leading-tight'>
 							Hello, I'm Shivam Nishad
 							<span className='block mt-2 text-indigo-400'>
 								{typedText}
 								<span className='animate-pulse'>|</span>
 							</span>
 						</h1>
-						<p className='text-center px-2 md:px-0 md:text-left w-full text-[1rem] text-gray-300 mb-6 md:mb-8'>
+						<p className='text-center px-2 md:px-0 md:text-left w-full text-[1rem] text-gray-600 dark:text-gray-300 mb-6 md:mb-8'>
 							Hi, I'm Shivam Nishad, a passionate Full Stack
 							Developer and Digital Entrepreneur with a knack for
 							building powerful web experiences. With years of
@@ -106,19 +106,19 @@ function PortfolioHero() {
 							<a
 								href='https://github.com/ShivamNishad0'
 								aria-label='GitHub'
-								className='text-gray-400 hover:text-white transition-colors duration-300'>
+								className='text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300'>
 								<Github size={18} className='md:w-5 md:h-5' />
 							</a>
 							<a
 								href='https://www.linkedin.com/in/sn-shivam/'
 								aria-label='LinkedIn'
-								className='text-gray-400 hover:text-white transition-colors duration-300'>
+								className='text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300'>
 								<Linkedin size={18} className='md:w-5 md:h-5' />
 							</a>
 							<a
 								href='mailto:sn.shivamni@gmail.com'
 								aria-label='Email'
-								className='text-gray-400 hover:text-white transition-colors duration-300'>
+								className='text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300'>
 								<Mail size={18} className='md:w-5 md:h-5' />
 							</a>
 						</div>
@@ -134,7 +134,7 @@ function PortfolioHero() {
 					}`}>
 					<div className='relative w-60 h-60 mx-auto md:mx-0 md:ml-auto sm:mt-10'>
 						<div className='absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500'>
-							<div className='absolute inset-1 rounded-full bg-black flex items-center justify-center overflow-hidden'>
+							<div className='absolute inset-1 rounded-full bg-white dark:bg-black flex items-center justify-center overflow-hidden'>
 								<div
 									className='w-full h-full rounded-full bg-cover bg-center'
 									style={{
@@ -146,17 +146,17 @@ function PortfolioHero() {
 						</div>
 
 						{/* Floating tags */}
-						<Button className='absolute top-0 right-0 bg-gray-900 py-1 px-4 md:py-2 md:px-4 rounded-full shadow-lg border border-gray-800 animate-float cursor-pointer hover:bg-gray-800 '>
+						<Button className='absolute top-0 right-0 bg-gray-100 dark:bg-gray-900 py-1 px-4 md:py-2 md:px-4 rounded-full shadow-lg border border-gray-300 dark:border-gray-800 animate-float cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 '>
 							<span className='text-xs md:text-sm font-medium '>
 								Full Stack Developer{" "}
 							</span>
 						</Button>
-						<Button className='absolute bottom-0 left-0 bg-gray-900 py-1 px-4 md:py-2 md:px-6 rounded-full shadow-lg border border-gray-800 animate-float-delay cursor-pointer hover:bg-gray-800 '>
+						<Button className='absolute bottom-0 left-0 bg-gray-100 dark:bg-gray-900 py-1 px-4 md:py-2 md:px-6 rounded-full shadow-lg border border-gray-300 dark:border-gray-800 animate-float-delay cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 '>
 							<span className='text-xs md:text-sm font-medium'>
 								Frontend
 							</span>
 						</Button>
-						<Button className='absolute bottom-0 right-0 bg-gray-900 py-1 px-3 md:py-2 md:px-4 rounded-full shadow-lg border border-gray-800 animate-float-delay-2 cursor-pointer hover:bg-gray-800 '>
+						<Button className='absolute bottom-0 right-0 bg-gray-100 dark:bg-gray-900 py-1 px-3 md:py-2 md:px-4 rounded-full shadow-lg border border-gray-300 dark:border-gray-800 animate-float-delay-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 '>
 							<span className='text-xs md:text-sm font-medium'>
 								Backend
 							</span>

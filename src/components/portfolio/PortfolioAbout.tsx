@@ -62,7 +62,7 @@ function PortfolioAbout() {
 	return (
 		<section
 			id='about'
-			className='bg-black text-white py-2 md:py-4 lg:py-8 overflow-hidden'>
+			className='bg-white dark:bg-black text-black dark:text-white py-2 md:py-4 lg:py-8 overflow-hidden'>
 			<div className='max-w-[768px] w-full xl:max-w-[1080px]  mx-auto px-4 sm:px-6 lg:px-8'>
 				{/* Section Header */}
 				<div className='text-center mb-16'>
@@ -76,7 +76,7 @@ function PortfolioAbout() {
 					<h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-6'>
 						My Journey & Expertise
 					</h2>
-					<p className='text-gray-300 max-w-3xl mx-auto text-base md:text-lg'>
+					<p className='text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-base md:text-lg'>
 						With over 5 years of experience crafting digital
 						experiences, I combine technical expertise with creative
 						design to build solutions that make an impact.
@@ -87,12 +87,12 @@ function PortfolioAbout() {
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 place-items-center grid-flow-row'>
 					{/* Experience Timeline */}
 					<Card
-						className={`transition-all duration-1000 delay-300 transform bg-transparent text-gray-200 ${
+						className={`transition-all duration-1000 delay-300 transform bg-transparent text-gray-800 dark:text-gray-200 ${
 							isVisible
 								? "translate-x-0 opacity-100"
 								: "-translate-x-12 opacity-0"
 						}`}>
-						<CardHeader className='text-2xl font-bold mb-6 flex items-center bg-transparent text-gray-200 p-0'>
+						<CardHeader className='text-2xl font-bold mb-6 flex items-center bg-transparent text-gray-800 dark:text-gray-200 p-0'>
 							<span className='bg-indigo-500/20 text-indigo-400 p-2 rounded-lg mr-3'>
 								<Layers className='w-6 h-6' />
 							</span>
@@ -103,18 +103,18 @@ function PortfolioAbout() {
 							{experiences.map((exp, index) => (
 								<div
 									key={index}
-									className='relative pl-8 border-l border-gray-800'>
-									<div className='absolute left-0 top-0 -translate-x-1/2 bg-indigo-600 w-4 h-4 rounded-full border-4 border-black'></div>
-									<span className='block text-indigo-400 text-sm mb-1'>
+									className='relative pl-8 border-l border-gray-300 dark:border-gray-800'>
+									<div className='absolute left-0 top-0 -translate-x-1/2 bg-indigo-600 w-4 h-4 rounded-full border-4 border-white dark:border-black'></div>
+									<span className='block text-indigo-600 dark:text-indigo-400 text-sm mb-1'>
 										{exp.year}
 									</span>
-									<h4 className='font-bold text-lg'>
+									<h4 className='font-bold text-lg text-gray-800 dark:text-gray-200'>
 										{exp.position}
 									</h4>
-									<span className='text-gray-400 text-sm block mb-2'>
+									<span className='text-gray-600 dark:text-gray-400 text-sm block mb-2'>
 										{exp.company}
 									</span>
-									<p className='text-gray-300'>
+									<p className='text-gray-700 dark:text-gray-300'>
 										{exp.description}
 									</p>
 								</div>
@@ -124,7 +124,7 @@ function PortfolioAbout() {
 
 					{/* Skills & Profile */}
 					<Card
-						className={`transition-all duration-1000 delay-500 transform p-2 bg-transparent rounded-2xl md:p-4 backdrop-blur-sm border  ${
+						className={`transition-all duration-1000 delay-500 transform p-2 bg-transparent rounded-2xl md:p-4 backdrop-blur-sm border border-gray-300 dark:border-gray-800 ${
 							isVisible
 								? "translate-x-0 opacity-100"
 								: "translate-x-12 opacity-0"
@@ -139,10 +139,10 @@ function PortfolioAbout() {
 										backgroundPosition: "center",
 									}}></div>
 								<div>
-									<h3 className='text-2xl font-bold mb-2 text-gray-400'>
+									<h3 className='text-2xl font-bold mb-2 text-gray-800 dark:text-gray-400'>
 										Shivam Nishad
 									</h3>
-									<p className='text-gray-300'>
+									<p className='text-gray-700 dark:text-gray-300'>
 										Creative developer passionate about
 										building beautiful, functional, and
 										accessible web experiences.
@@ -151,14 +151,14 @@ function PortfolioAbout() {
 							</div>
 						</CardHeader>
 						<CardBody className='bg-transparent'>
-							<h3 className='text-xl font-bold mb-4 text-gray-400'>
+							<h3 className='text-xl font-bold mb-4 text-gray-800 dark:text-gray-400'>
 								Core Skills
 							</h3>
 							<div className=' grid grid-cols-1 grid-flow-row-dense  gap-2 mb-8'>
 								{skills.map((skill, index) => (
 									<div
 										key={index}
-										className='flex items-center gap-3 bg-gray-800/50 rounded-lg p-3 border border-gray-700 text-gray-400'>
+										className='flex items-center gap-3 bg-gray-100/50 dark:bg-gray-800/50 rounded-lg p-3 border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-400'>
 										<div className='bg-indigo-500/20 text-indigo-400 p-2 rounded-lg flex-shrink-0'>
 											{skill.icon}
 										</div>
@@ -171,7 +171,7 @@ function PortfolioAbout() {
 						</CardBody>
 
 						<CardFooter className='bg-transparent'>
-							<h3 className='text-xl font-bold mb-4 text-gray-400'>
+							<h3 className='text-xl font-bold mb-4 text-gray-800 dark:text-gray-400'>
 								Technologies
 							</h3>
 							<div className='flex flex-wrap gap-2 mb-6'>
@@ -187,7 +187,7 @@ function PortfolioAbout() {
 								].map((tech, index) => (
 									<span
 										key={index}
-										className='bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full text-sm cursor-pointer'>
+										className='bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 px-3 py-1 rounded-full text-sm cursor-pointer'>
 										{tech}
 									</span>
 								))}
