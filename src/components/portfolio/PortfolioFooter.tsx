@@ -47,13 +47,13 @@ function PortfolioFooter() {
 
 	return (
 		<footer
-			className={`relative w-full bg-black text-white py-12 overflow-hidden transition-opacity duration-1000 `}>
+			className={`relative w-full bg-white dark:bg-black text-black dark:text-white py-12 overflow-hidden transition-opacity duration-1000 `}>
 			{/* Background gradient element */}
 			<div className='absolute bottom-0 left-1/4 w-64 h-64 bg-indigo-600 opacity-10 rounded-full blur-3xl pointer-events-none'></div>
 
 			<div className='flex flex-col space-y-10 justify-center  max-w-[768px] w-full xl:max-w-[1080px] mx-auto px-4 sm:px-6'>
 				{/* Navigation Links - Responsive grid for smaller screens */}
-				<nav className='grid grid-cols-2 place-items-center sm:grid-cols-3 md:flex md:justify-center md:flex-wrap gap-4 md:gap-6 text-gray-400 font-medium'>
+				<nav className='grid grid-cols-2 place-items-center sm:grid-cols-3 md:flex md:justify-center md:flex-wrap gap-4 md:gap-6 text-gray-500 dark:text-gray-400 font-medium'>
 					{navLinks.map((link, index) => (
 						<a
 							key={index}
@@ -72,7 +72,7 @@ function PortfolioFooter() {
 							href={social.href}
 							target='_blank'
 							rel='noopener noreferrer'
-							className=' w-10 h-10  rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110'
+							className='w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110'
 							style={{ color: social.color }}
 							aria-label={social.name}>
 							{social.icon}
@@ -88,7 +88,7 @@ function PortfolioFooter() {
 							&copy; {currentYear}
 						</span>
 					</div>
-					<p className='text-gray-500 font-medium'>
+					<p className='text-gray-600 dark:text-gray-500 font-medium'>
 						Shivam Nishad. All rights reserved.
 					</p>
 				</div>

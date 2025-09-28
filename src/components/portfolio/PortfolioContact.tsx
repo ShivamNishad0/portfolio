@@ -105,7 +105,7 @@ function PortfolioContact() {
 	return (
 		<section
 			id='contact'
-			className='bg-black text-white py-16 md:py-4 lg:py-8 overflow-hidden'>
+			className='bg-white dark:bg-black text-black dark:text-white py-16 md:py-4 lg:py-8 overflow-hidden'>
 			<div className='max-w-[768px] w-full xl:max-w-[1080px]  mx-auto px-4 sm:px-6 lg:px-8'>
 				{/* Section Header */}
 				<div className='text-center mb-16'>
@@ -119,7 +119,7 @@ function PortfolioContact() {
 					<h2 className='text-3xl md:text-4xl lg:text-5xl font-bold mb-6'>
 						Get In Touch
 					</h2>
-					<p className='text-gray-300 max-w-2xl mx-auto text-base md:text-lg'>
+					<p className='text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-base md:text-lg'>
 						Have a project in mind or just want to say hello? Feel
 						free to reach out. I'm always open to discussing new
 						projects, creative ideas or opportunities to be part of
@@ -136,12 +136,12 @@ function PortfolioContact() {
 								? "translate-x-0 opacity-100"
 								: "-translate-x-12 opacity-0"
 						}`}>
-						<Card className='bg-gray-900/50 backdrop-blur-sm border text-gray-200 border-gray-800 rounded-2xl p-6 md:p-8 h-full'>
-							<CardHeader className='p-0 bg-transparent text-gray-200'>
+						<Card className='bg-gray-100/50 dark:bg-gray-900/50 backdrop-blur-sm border text-gray-800 dark:text-gray-200 border-gray-300 dark:border-gray-800 rounded-2xl p-6 md:p-8 h-full'>
+							<CardHeader className='p-0 bg-transparent text-gray-800 dark:text-gray-200'>
 								<h3 className='text-2xl font-bold mb-6'>
 									Contact Information
 								</h3>
-								<p className='text-gray-300 mb-8'>
+								<p className='text-gray-600 dark:text-gray-300 mb-8'>
 									Let's turn your ideas into reality. I'm here
 									to help with any questions about
 									collaboration or projects.
@@ -157,17 +157,17 @@ function PortfolioContact() {
 											{item.icon}
 										</div>
 										<div>
-											<h4 className='text-sm text-gray-400 mb-1'>
+											<h4 className='text-sm text-gray-500 dark:text-gray-400 mb-1'>
 												{item.title}
 											</h4>
 											{item.link ? (
 												<a
 													href={item.link}
-													className='text-white hover:text-indigo-400 transition-colors'>
+													className='text-gray-800 dark:text-white hover:text-indigo-400 transition-colors'>
 													{item.value}
 												</a>
 											) : (
-												<p className='text-white'>
+												<p className='text-gray-800 dark:text-white'>
 													{item.value}
 												</p>
 											)}
@@ -184,14 +184,14 @@ function PortfolioContact() {
 									<a
 										href='https://www.linkedin.com/in/sn-shivam/'
 										aria-label={`Connect on Linkedin`}
-										className='w-10 h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center transition-colors'>
+										className='w-10 h-10 bg-gray-200 dark:bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center transition-colors'>
 										<Linkedin />
 									</a>
-									
+
 									<a
 										href='https://github.com/ShivamNishad0'
 										aria-label={`Connect on Github`}
-										className='w-10 h-10 bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center transition-colors'>
+										className='w-10 h-10 bg-gray-200 dark:bg-gray-800 hover:bg-indigo-600 rounded-full flex items-center justify-center transition-colors'>
 										<Github />
 									</a>
 								</div>
@@ -201,13 +201,13 @@ function PortfolioContact() {
 
 					{/* Contact Form */}
 					<Card
-						className={`lg:col-span-3 transition-all backdrop-blur-sm   rounded-2xl duration-1000 border-gray-800 border delay-300 transform bg-transparent text-gray-200 ${
+						className={`lg:col-span-3 transition-all backdrop-blur-sm   rounded-2xl duration-1000 border-gray-300 dark:border-gray-800 border delay-300 transform bg-transparent text-gray-800 dark:text-gray-200 ${
 							isVisible
 								? "translate-x-0 opacity-100"
 								: "translate-x-12 opacity-0"
 						}`}>
 						<CardBody className=' bg-transparent  p-6 md:p-8'>
-							<h3 className='text-2xl font-bold mb-6 text-gray-200'>
+							<h3 className='text-2xl font-bold mb-6 text-gray-800 dark:text-gray-200'>
 								Send Me a Message
 							</h3>
 
@@ -216,7 +216,7 @@ function PortfolioContact() {
 									<div>
 										<label
 											htmlFor='name'
-											className='block text-sm font-medium text-gray-300 mb-2'>
+											className='block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2'>
 											Your Name
 										</label>
 										<input
@@ -226,7 +226,7 @@ function PortfolioContact() {
 											value={formState.name}
 											onChange={handleChange}
 											required
-											className='w-full bg-gray-800/50 border border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all'
+											className='w-full bg-gray-100/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all'
 											placeholder='John Doe'
 										/>
 									</div>
@@ -234,7 +234,7 @@ function PortfolioContact() {
 									<div>
 										<label
 											htmlFor='email'
-											className='block text-sm font-medium text-gray-300 mb-2'>
+											className='block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2'>
 											Your Email
 										</label>
 										<input
@@ -244,7 +244,7 @@ function PortfolioContact() {
 											value={formState.email}
 											onChange={handleChange}
 											required
-											className='w-full bg-gray-800/50 border border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all'
+											className='w-full bg-gray-100/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all'
 											placeholder='john@example.com'
 										/>
 									</div>
@@ -253,7 +253,7 @@ function PortfolioContact() {
 								<div>
 									<label
 										htmlFor='subject'
-										className='block text-sm font-medium text-gray-300 mb-2'>
+										className='block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2'>
 										Subject
 									</label>
 									<input
@@ -263,7 +263,7 @@ function PortfolioContact() {
 										value={formState.subject}
 										onChange={handleChange}
 										required
-										className='w-full bg-gray-800/50 border border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all'
+										className='w-full bg-gray-100/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all'
 										placeholder='Project Discussion'
 									/>
 								</div>
@@ -271,7 +271,7 @@ function PortfolioContact() {
 								<div>
 									<label
 										htmlFor='message'
-										className='block text-sm font-medium text-gray-300 mb-2'>
+										className='block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2'>
 										Your Message
 									</label>
 									<textarea
@@ -281,7 +281,7 @@ function PortfolioContact() {
 										onChange={handleChange}
 										required
 										rows={5}
-										className='w-full bg-gray-800/50 border border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all resize-none'
+										className='w-full bg-gray-100/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all resize-none'
 										placeholder="Hello, I'd like to talk about..."></textarea>
 								</div>
 

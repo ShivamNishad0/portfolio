@@ -54,7 +54,7 @@ function PortfolioSkills() {
 	return (
 		<section
 			id='skills'
-			className='w-full bg-black text-white py-12 md:py-20 lg:py-24 overflow-hidden relative'>
+			className='w-full bg-white dark:bg-black text-black dark:text-white py-12 md:py-20 lg:py-24 overflow-hidden relative'>
 			<div className='max-w-[768px] w-full xl:max-w-[1080px] mx-auto px-4 sm:px-6'>
 				<div
 					className={`w-full transition-all duration-1000 transform ${
@@ -78,28 +78,28 @@ function PortfolioSkills() {
 						{techCategories.map((category, index) => (
 							<Card
 								key={index}
-								className={`bg-gray-900 bg-opacity-70 backdrop-blur-sm border border-gray-800 rounded-xl p-5 md:p-6 hover:border-indigo-500 transition-all duration-500 transform min-h-48 ${
+								className={`bg-gray-100 dark:bg-gray-900 bg-opacity-70 backdrop-blur-sm border border-gray-300 dark:border-gray-800 rounded-xl p-5 md:p-6 hover:border-indigo-500 transition-all duration-500 transform min-h-48 ${
 									isVisible
 										? "translate-y-0 opacity-100"
 										: "translate-y-12 opacity-0"
 								}`}>
 								<CardHeader className='bg-transparent border-0 shadow-none p-0'>
 									<div className='flex items-center mb-4'>
-										<div className='p-2 mr-3 text-gray-200 bg-gray-800 rounded-lg'>
+										<div className='p-2 mr-3 text-gray-800 dark:text-gray-200 bg-gray-200 dark:bg-gray-800 rounded-lg'>
 											{category.icon}
 										</div>
-										<h3 className='text-lg text-gray-200 md:text-xl font-semibold'>
+										<h3 className='text-lg text-gray-800 dark:text-gray-200 md:text-xl font-semibold'>
 											{category.title}
 										</h3>
 									</div>
 								</CardHeader>
 								<CardBody className='bg-transparent border-0 shadow-none p-0'>
-									<div className='flex flex-wrap gap-2 text-gray-200'>
+									<div className='flex flex-wrap gap-2 text-gray-800 dark:text-gray-200'>
 										{category.skills.map(
 											(skill, skillIndex) => (
 												<span
 													key={skillIndex}
-													className='bg-gray-800 hover:bg-indigo-900 text-xs md:text-sm py-1 px-3 rounded-full transition-colors duration-300'>
+													className='bg-gray-200 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-indigo-900 text-xs md:text-sm py-1 px-3 rounded-full transition-colors duration-300'>
 													{skill}
 												</span>
 											)

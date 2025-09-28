@@ -66,7 +66,7 @@ function PortfolioProjects() {
 	return (
 		<section
 			id='projects'
-			className='bg-black text-white py-16 md:py-24 lg:py-32 overflow-hidden relative'>
+			className='bg-white dark:bg-black text-black dark:text-white py-16 md:py-24 lg:py-32 overflow-hidden relative'>
 			<div className='max-w-[768px] w-full xl:max-w-[1080px] mx-auto px-4 sm:px-6 lg:px-8'>
 				{/* Section Header */}
 				<div className='text-center mb-16'>
@@ -81,7 +81,7 @@ function PortfolioProjects() {
 						Featured{" "}
 						<span className='text-indigo-400'>Projects</span>
 					</h2>
-					<p className='text-gray-300 max-w-3xl mx-auto text-base md:text-lg'>
+					<p className='text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-base md:text-lg'>
 						A collection of projects showcasing my expertise in
 						system programming, version control systems, and web
 						development.
@@ -96,7 +96,7 @@ function PortfolioProjects() {
 					.map((project, index) => (
 					<Card
 						key={index}
-						className={`group relative rounded-2xl overflow-hidden border border-gray-800 bg-gray-900/50 backdrop-blur-sm transition-all duration-500 transform hover:border-indigo-500 h-full`}
+						className={`group relative rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-800 bg-gray-100/50 dark:bg-gray-900/50 backdrop-blur-sm transition-all duration-500 transform hover:border-indigo-500 h-full`}
 					>
 						<CardHeader className="aspect-video relative overflow-hidden bg-transparent">
 						<img
@@ -129,7 +129,7 @@ function PortfolioProjects() {
 						</div>
 						</CardHeader>
 
-						<CardBody className="p-4 sm:p-6 bg-transparent text-gray-300 flex flex-col h-full">
+						<CardBody className="p-4 sm:p-6 bg-transparent text-gray-600 dark:text-gray-300 flex flex-col h-full">
 						{/* Title + Icon */}
 						<div className="flex items-center mb-3">
 							<div className="bg-indigo-500/20 text-indigo-400 p-2 rounded-lg mr-3">
@@ -141,7 +141,7 @@ function PortfolioProjects() {
 						</div>
 
 						{/* Description fills available space */}
-						<p className="text-gray-300 mb-4 text-sm sm:text-base flex-grow">
+						<p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base flex-grow">
 							{project.description}
 						</p>
 
@@ -171,7 +171,7 @@ function PortfolioProjects() {
 						.map((project, index) => (
 							<div
 								key={index}
-								className={`group border border-gray-800 bg-gray-900/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 hover:border-indigo-500 transition-all duration-500 transform text-gray-200 ${
+								className={`group border border-gray-300 dark:border-gray-800 bg-gray-100/50 dark:bg-gray-900/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 hover:border-indigo-500 transition-all duration-500 transform text-gray-800 dark:text-gray-200 ${
 									isVisible
 										? "translate-y-0 opacity-100"
 										: "translate-y-12 opacity-0"
@@ -184,7 +184,7 @@ function PortfolioProjects() {
 										<div className='bg-indigo-500/20 text-indigo-400 p-2 rounded-lg mr-3'>
 											{project.icon}
 										</div>
-										<h3 className='font-bold text-base sm:text-lg truncate text-gray-200 '>
+										<h3 className='font-bold text-base sm:text-lg truncate text-gray-800 dark:text-gray-200 '>
 											{project.title}
 										</h3>
 									</div>
@@ -205,14 +205,14 @@ function PortfolioProjects() {
 										</a>
 									</div>
 								</div>
-								<p className='text-gray-300 mb-4 text-xs sm:text-sm line-clamp-2'>
+								<p className='text-gray-600 dark:text-gray-300 mb-4 text-xs sm:text-sm line-clamp-2'>
 									{project.description}
 								</p>
 								<div className='flex flex-wrap gap-2'>
 									{project.tags.map((tag, tagIndex) => (
 										<span
 											key={tagIndex}
-											className='bg-gray-800 text-gray-300 px-2 py-1 rounded-full text-xs'>
+											className='bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 px-2 py-1 rounded-full text-xs'>
 											{tag}
 										</span>
 									))}
