@@ -1,1 +1,0 @@
-- [x] Update download attribute in PortfolioHeroSection.tsx to rename downloaded resume file to "Shivam Nishad.pdf"
