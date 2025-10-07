@@ -92,7 +92,7 @@ function PortfolioHero() {
 					</CardBody>
 
 					<CardFooter className='flex flex-col sm:justify-center md:justify-start sm:flex-row items-center  w-full gap-3 md:gap-4 bg-transparent p-0'>
-						<a href='./Resume.pdf' download='./Resume.pdf'>
+						<a href='./Resume.pdf' download='Shivam Nishad.pdf'>
 							<Button className='group flex items-center bg-indigo-600 hover:bg-indigo-700 text-white text-sm md:text-base font-medium py-3 px-4  rounded-md transition-all duration-300 shadow-lg hover:shadow-indigo-500/25 cursor-pointer'>
 								Download Resume
 								<ArrowRight
