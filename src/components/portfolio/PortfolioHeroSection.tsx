@@ -132,7 +132,7 @@ function PortfolioHero() {
 							? "translate-y-0 opacity-100"
 							: "translate-y-12 opacity-0"
 					}`}>
-					<div className='relative w-60 h-60 mx-auto md:mx-0 md:ml-auto sm:mt-10'>
+					<div className='relative w-100 h-100 mx-auto md:mx-0 md:ml-auto sm:mt-10'>
 						<div className='absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500'>
 							<div className='absolute inset-1 rounded-full bg-white dark:bg-black flex items-center justify-center overflow-hidden'>
 								<div
