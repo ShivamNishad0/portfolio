@@ -2,8 +2,11 @@ import { useState, useEffect } from "react";
 import {
 	Github,
 	ExternalLink,
-	Quote,
-	ShoppingBag,
+	NotebookTabs,
+	SquareCheckBig,
+	BriefcaseMedical,
+	BookOpen,
+	Scroll,
 } from "lucide-react";
 import { Card, CardBody, CardHeader } from "@traken-ui/react";
 
@@ -24,7 +27,7 @@ function PortfolioProjects() {
 			githubUrl: "https://github.com/ShivamNishad0/Event-Scheduling",
 			liveUrl: "https://event-scheduling.onrender.com/",
 			featured: true,
-			icon: <ShoppingBag className='w-5 h-5' />,
+			icon: <NotebookTabs className='w-5 h-5' />,
 		},
 		{
 			title: "Task Tracker",
@@ -35,7 +38,7 @@ function PortfolioProjects() {
 			githubUrl: "https://github.com/ShivamNishad0/tasktracker",
 			liveUrl: "https://tasktrackershivam.netlify.app/",
 			featured: true,
-			icon: <ShoppingBag className='w-5 h-5' />,
+			icon: <SquareCheckBig className='w-5 h-5' />,
 		},
 		{
 			title: "DocEase: Recommendation System",
@@ -46,7 +49,7 @@ function PortfolioProjects() {
 			githubUrl: "https://github.com/ShivamNishad0/DocEase",
 			liveUrl: "https://doceasee.netlify.app/",
 			featured: true,
-			icon: <Quote className='w-5 h-5' />,
+			icon: <BriefcaseMedical className='w-5 h-5' />,
 		},
 		{
 			title: "Book World",
@@ -57,7 +60,7 @@ function PortfolioProjects() {
 			githubUrl: "https://github.com/ShivamNishad0/BookRecommendation",
 			// liveUrl: "https://www.evtn.org",
 			featured: true,
-			icon: <ShoppingBag className='w-5 h-5' />,
+			icon: <BookOpen className='w-5 h-5' />,
 		},
 		{
 			title: "Portfolio",
@@ -68,7 +71,7 @@ function PortfolioProjects() {
 			githubUrl: "https://github.com/ShivamNishad0/portfolio",
 			liveUrl: "shivamnishadd.netlify.app",
 			featured: true,
-			icon: <ShoppingBag className='w-5 h-5' />,
+			icon: <Scroll className='w-5 h-5' />,
 		},
 		
 		
@@ -109,7 +112,7 @@ function PortfolioProjects() {
 						key={index}
 						className={`group relative rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-800 bg-gray-100/50 dark:bg-gray-900/50 backdrop-blur-sm transition-all duration-500 transform hover:border-indigo-500 h-full`}
 					>
-						<CardHeader className="aspect-video relative overflow-hidden bg-transparent">
+						<CardHeader className="aspect-video relative overflow-hidden bg-transparent h-64">
 						<img
 							src={project.image}
 							alt={project.title}
