@@ -2,8 +2,11 @@ import { useState, useEffect } from "react";
 import {
 	Github,
 	ExternalLink,
-	Quote,
-	ShoppingBag,
+	NotebookTabs,
+	SquareCheckBig,
+	BriefcaseMedical,
+	BookOpen,
+	Scroll,
 } from "lucide-react";
 import { Card, CardBody, CardHeader } from "@traken-ui/react";
 
@@ -16,6 +19,17 @@ function PortfolioProjects() {
 
 	const projects = [
 		{
+			title: "Event Scheduler",
+			description:
+			"A full-stack Event Scheduling Web App built using the PERN stack (PostgreSQL, Express.js, React.js, Node.js). It enables users to create, view, update, and manage events efficiently through an intuitive interface.",			
+			image: "/eventscheduler.png",
+			tags: ["React.js", "Node.js", "Tailwind CSS", "PostgreSQL"],
+			githubUrl: "https://github.com/ShivamNishad0/Event-Scheduling",
+			liveUrl: "https://event-scheduling.onrender.com/",
+			featured: true,
+			icon: <NotebookTabs className='w-5 h-5' />,
+		},
+		{
 			title: "Task Tracker",
 			description:
 			"Task Tracker is a lightweight productivity app that helps users efficiently manage daily tasks. It lets users create, update, delete, and complete tasks while setting priorities and deadlines for better time management. The app features a clean interface along with WhatsApp integration for a welcome message and instant chat support, ensuring users stay organized and never miss important tasks.",			
@@ -24,7 +38,7 @@ function PortfolioProjects() {
 			githubUrl: "https://github.com/ShivamNishad0/tasktracker",
 			liveUrl: "https://tasktrackershivam.netlify.app/",
 			featured: true,
-			icon: <ShoppingBag className='w-5 h-5' />,
+			icon: <SquareCheckBig className='w-5 h-5' />,
 		},
 		{
 			title: "DocEase: Recommendation System",
@@ -35,7 +49,7 @@ function PortfolioProjects() {
 			githubUrl: "https://github.com/ShivamNishad0/DocEase",
 			liveUrl: "https://doceasee.netlify.app/",
 			featured: true,
-			icon: <Quote className='w-5 h-5' />,
+			icon: <BriefcaseMedical className='w-5 h-5' />,
 		},
 		{
 			title: "Book World",
@@ -46,7 +60,7 @@ function PortfolioProjects() {
 			githubUrl: "https://github.com/ShivamNishad0/BookRecommendation",
 			// liveUrl: "https://www.evtn.org",
 			featured: true,
-			icon: <ShoppingBag className='w-5 h-5' />,
+			icon: <BookOpen className='w-5 h-5' />,
 		},
 		{
 			title: "Portfolio",
@@ -57,7 +71,7 @@ function PortfolioProjects() {
 			githubUrl: "https://github.com/ShivamNishad0/portfolio",
 			liveUrl: "shivamnishadd.netlify.app",
 			featured: true,
-			icon: <ShoppingBag className='w-5 h-5' />,
+			icon: <Scroll className='w-5 h-5' />,
 		},
 		
 		
@@ -98,7 +112,7 @@ function PortfolioProjects() {
 						key={index}
 						className={`group relative rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-800 bg-gray-100/50 dark:bg-gray-900/50 backdrop-blur-sm transition-all duration-500 transform hover:border-indigo-500 h-full`}
 					>
-						<CardHeader className="aspect-video relative overflow-hidden bg-transparent">
+						<CardHeader className="aspect-video relative overflow-hidden bg-transparent h-64">
 						<img
 							src={project.image}
 							alt={project.title}
@@ -142,7 +156,7 @@ function PortfolioProjects() {
 
 						{/* Description fills available space */}
 						<p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base flex-grow">
-							{project.description}
+							{project.description.length > 150 ? project.description.slice(0, 150) + "..." : project.description}
 						</p>
 
 						{/* Tags always at the bottom */}
