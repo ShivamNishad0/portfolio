@@ -5,6 +5,7 @@ import {
 	NotebookTabs,
 	SquareCheckBig,
 	BriefcaseMedical,
+	Webhook,
 	BookOpen,
 	Scroll,
 } from "lucide-react";
@@ -18,6 +19,17 @@ function PortfolioProjects() {
 	}, []);
 
 	const projects = [
+		{
+			title: "prodify",
+			description:
+			"Prodify is a modern product management and showcase platform designed to help users discover, organize, and manage products efficiently. It focuses on clean UI, smooth user experience, and scalable architecture, making it ideal for real-world product workflows.",			
+			image: "/prodify.png",
+			tags: ["React.js", "Node.js", "Tailwind CSS", "MongoDB", "Express.js"],
+			githubUrl: "https://github.com/ShivamNishad0/prodify",
+			// liveUrl: "https://event-scheduling.onrender.com/",
+			featured: true,
+			icon: <Webhook className='w-5 h-5' />,
+		},
 		{
 			title: "Event Scheduler",
 			description:
