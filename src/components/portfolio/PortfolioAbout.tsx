@@ -138,7 +138,7 @@ function PortfolioAbout() {
 										backgroundSize: "cover",
 										backgroundPosition: "center",
 									}}></div>
-								<div>
+								<div className='shadow-lg '>
 									<h3 className='text-2xl font-bold mb-2 text-gray-800 dark:text-gray-400'>
 										Shivam Nishad
 									</h3>
