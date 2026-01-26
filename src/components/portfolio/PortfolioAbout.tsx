@@ -48,7 +48,7 @@ function PortfolioAbout() {
 			position: "Master of Computer Applications",
 			company: "Pranveer Singh Institute of Technology",
 			description:
-				"Successfully completed a Master’s degree in Computer Applications, gaining in-depth knowledge of software development, data structures, algorithms, and database management systems.",
+				"Successfully completed a Master's degree in Computer Applications, gaining in-depth knowledge of software development, data structures, algorithms, and database management systems.",
 		},
 		{
 			year: "2020 - 2023",
@@ -63,7 +63,7 @@ function PortfolioAbout() {
 		<section
 			id='about'
 			className='bg-white dark:bg-black text-black dark:text-white py-2 md:py-4 lg:py-8 overflow-hidden'>
-			<div className='max-w-[768px] w-full xl:max-w-[1080px]  mx-auto px-4 sm:px-6 lg:px-8'>
+			<div className='max-w-3xl w-full xl:max-w-270  mx-auto px-4 sm:px-6 lg:px-8'>
 				{/* Section Header */}
 				<div className='text-center mb-16'>
 					<div className='flex items-center justify-center space-x-3 mb-6'>
@@ -132,7 +132,7 @@ function PortfolioAbout() {
 						<CardHeader className='bg-transparent'>
 							<div className='flex flex-col md:flex-row md:items-center mb-8 gap-6'>
 								<div
-									className='w-24 h-24 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 p-1 flex-shrink-0'
+									className='w-24 h-24 rounded-full bg-linear-to-tr from-indigo-500 to-purple-600 p-1 shrink-0'
 									style={{
 										backgroundImage: "url(./IMG_2834.jpg)",
 										backgroundSize: "cover",
@@ -159,7 +159,7 @@ function PortfolioAbout() {
 									<div
 										key={index}
 										className='flex items-center gap-3 bg-gray-100/50 dark:bg-gray-800/50 rounded-lg p-3 border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-400'>
-										<div className='bg-indigo-500/20 text-indigo-400 p-2 rounded-lg flex-shrink-0'>
+										<div className='bg-indigo-500/20 text-indigo-400 p-2 rounded-lg shrink-0'>
 											{skill.icon}
 										</div>
 										<span className='font-medium'>

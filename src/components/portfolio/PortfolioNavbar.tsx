@@ -2,7 +2,7 @@ import { Button } from "@traken-ui/react";
 import { useState } from "react";
 import { useTheme } from "../../contexts/ThemeContext";
 
-let closeIcon = (
+const closeIcon = (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
 		viewBox='0 0 24 24'
@@ -12,7 +12,7 @@ let closeIcon = (
 		<path d='M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z' />
 	</svg>
 );
-let menuIcon = (
+const menuIcon = (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
 		viewBox='0 0 24 24'
@@ -23,7 +23,7 @@ let menuIcon = (
 	</svg>
 );
 
-let sunIcon = (
+const sunIcon = (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
 		viewBox='0 0 24 24'
@@ -34,7 +34,7 @@ let sunIcon = (
 	</svg>
 );
 
-let moonIcon = (
+const moonIcon = (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
 		viewBox='0 0 24 24'
@@ -61,7 +61,7 @@ function NavbarPortfolio() {
 		<header
 			className={`w-full bg-transparent dark:bg-gray-900/50 fixed top-0 left-0 backdrop-blur-2xl shadow-md z-50 md:px-8`}>
 			{/* Desktop Navbar */}
-			<div className='max-w-[768px] w-full xl:max-w-[1080px] mx-auto px-2 sm:px-8 lg:px-10 py-4 flex justify-between items-center'>
+			<div className='max-w-3xl w-full xl:max-w-270 mx-auto px-2 sm:px-8 lg:px-10 py-4 flex justify-between items-center'>
 				{/* Logo and Links */}
 				<div className='text-3xl font-bold text-gray-800 dark:text-gray-200'>
 					<a href='/'>Shivam Nishad</a>

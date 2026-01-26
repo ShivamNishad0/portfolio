@@ -55,7 +55,7 @@ function PortfolioSkills() {
 		<section
 			id='skills'
 			className='w-full bg-white dark:bg-black text-black dark:text-white py-12 md:py-20 lg:py-24 overflow-hidden relative'>
-			<div className='max-w-[768px] w-full xl:max-w-[1080px] mx-auto px-4 sm:px-6'>
+			<div className='max-w-3xl w-full xl:max-w-270 mx-auto px-4 sm:px-6'>
 				<div
 					className={`w-full transition-all duration-1000 transform ${
 						isVisible

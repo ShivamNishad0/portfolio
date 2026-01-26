@@ -52,7 +52,7 @@ function PortfolioFooter() {
 			{/* Background gradient element */}
 			<div className='absolute bottom-0 left-1/4 w-64 h-64 bg-indigo-600 opacity-10 rounded-full blur-3xl pointer-events-none'></div>
 
-			<div className='flex flex-col space-y-10 justify-center  max-w-[768px] w-full xl:max-w-[1080px] mx-auto px-4 sm:px-6'>
+			<div className='flex flex-col space-y-10 justify-center  max-w-3xl w-full xl:max-w-270 mx-auto px-4 sm:px-6'>
 				{/* Navigation Links - Responsive grid for smaller screens */}
 				<nav className='grid grid-cols-2 place-items-center sm:grid-cols-3 md:flex md:justify-center md:flex-wrap gap-4 md:gap-6 text-gray-500 dark:text-gray-400 font-medium'>
 					{navLinks.map((link, index) => (

@@ -93,7 +93,7 @@ function PortfolioProjects() {
 		<section
 			id='projects'
 			className='bg-white dark:bg-black text-black dark:text-white py-16 md:py-24 lg:py-32 overflow-hidden relative'>
-			<div className='max-w-[768px] w-full xl:max-w-[1080px] mx-auto px-4 sm:px-6 lg:px-8'>
+			<div className='max-w-3xl w-full xl:max-w-270 mx-auto px-4 sm:px-6 lg:px-8'>
 				{/* Section Header */}
 				<div className='text-center mb-16'>
 					<div className='flex items-center justify-center space-x-3 mb-6'>
@@ -130,7 +130,7 @@ function PortfolioProjects() {
 							alt={project.title}
 							className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-t-2xl"
 						/>
-						<div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+						<div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
 
 						{/* Project Links */}
 						<div className="absolute top-4 right-4 flex space-x-2">
@@ -167,7 +167,7 @@ function PortfolioProjects() {
 						</div>
 
 						{/* Description fills available space */}
-						<p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base flex-grow">
+						<p className="text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base grow">
 							{project.description.length > 150 ? project.description.slice(0, 150) + "..." : project.description}
 						</p>
 

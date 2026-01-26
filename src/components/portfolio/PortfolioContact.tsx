@@ -106,7 +106,7 @@ function PortfolioContact() {
 		<section
 			id='contact'
 			className='bg-white dark:bg-black text-black dark:text-white py-16 md:py-4 lg:py-8 overflow-hidden'>
-			<div className='max-w-[768px] w-full xl:max-w-[1080px]  mx-auto px-4 sm:px-6 lg:px-8'>
+			<div className='max-w-3xl w-full xl:max-w-270  mx-auto px-4 sm:px-6 lg:px-8'>
 				{/* Section Header */}
 				<div className='text-center mb-16'>
 					<div className='flex items-center justify-center space-x-3 mb-6'>
