@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Code, Figma, Layers, Lightbulb, ArrowRight } from "lucide-react";
 import {
 	Button,
@@ -7,14 +6,9 @@ import {
 	CardFooter,
 	CardHeader,
 } from "@traken-ui/react";
+import { ScrollReveal } from "./ScrollReveal";
 
 function PortfolioAbout() {
-	const [isVisible, setIsVisible] = useState(false);
-
-	useEffect(() => {
-		setIsVisible(true);
-	}, []);
-
 	const skills = [
 		{ name: "Frontend Development", icon: <Code className='w-5 h-5' /> },
 		{ name: "Backend Development", icon: <Figma className='w-5 h-5' /> },
@@ -98,123 +92,119 @@ function PortfolioAbout() {
 				</div>
 
 				{/* About Content */}
-				<div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 place-items-center grid-flow-row'>
+				<div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 place-items-start grid-flow-row w-full'>
 					{/* Experience Timeline */}
-					<Card
-						className={`transition-all duration-1000 delay-300 transform bg-transparent text-gray-800 dark:text-gray-100 ${isVisible
-							? "translate-x-0 opacity-100"
-							: "-translate-x-12 opacity-0"
-							}`}>
-						<CardHeader className='text-2xl font-bold mb-6 flex items-center bg-transparent text-gray-800 dark:text-gray-200 p-0'>
-							<span className='bg-indigo-500/20 text-indigo-400 p-2 rounded-lg mr-3'>
-								<Layers className='w-6 h-6' />
-							</span>
-							Education & Experience
-						</CardHeader>
+					<ScrollReveal delay={200} className="w-full">
+						<Card className="bg-transparent text-gray-800 dark:text-gray-100 border-none shadow-none p-0">
+							<CardHeader className='text-2xl font-bold mb-6 flex items-center bg-transparent text-gray-800 dark:text-gray-200 p-0'>
+								<span className='bg-indigo-500/20 text-indigo-400 p-2 rounded-lg mr-3'>
+									<Layers className='w-6 h-6' />
+								</span>
+								Education & Experience
+							</CardHeader>
 
-						<CardBody className='space-y-8 bg-transparent text-gray-700 dark:text-gray-300'>
-							{experiences.map((exp, index) => (
-								<div
-									key={index}
-									className='relative pl-8 border-l border-gray-300 dark:border-gray-800'>
-									<div className='absolute left-0 top-0 -translate-x-1/2 bg-indigo-600 w-4 h-4 rounded-full border-4 border-white dark:border-black'></div>
-									<span className='block text-indigo-600 dark:text-indigo-400 text-sm mb-1'>
-										{exp.year}
-									</span>
-									<h4 className='font-bold text-lg text-gray-800 dark:text-gray-200'>
-										{exp.position}
-									</h4>
-									<span className='text-gray-600 dark:text-gray-400 text-sm block mb-2'>
-										{exp.company}
-									</span>
-									<p className='text-gray-700 dark:text-gray-300'>
-										{exp.description}
-									</p>
-								</div>
-							))}
-						</CardBody>
-					</Card>
-
-					{/* Skills & Profile */}
-					<Card
-						className={`transition-all duration-1000 delay-500 transform p-2 bg-transparent rounded-2xl md:p-4 backdrop-blur-sm border border-gray-200 dark:border-gray-800 ${isVisible
-							? "translate-x-0 opacity-100"
-							: "translate-x-12 opacity-0"
-							}`}>
-						<CardHeader className='bg-transparent'>
-							<div className='flex flex-col md:flex-row md:items-center mb-8 gap-6'>
-								<div
-									className='w-24 h-24 rounded-full bg-linear-to-tr from-indigo-500 to-purple-600 p-1 shrink-0'
-									style={{
-										backgroundImage: "url(./IMG_2834.jpg)",
-										backgroundSize: "cover",
-										backgroundPosition: "center",
-									}}></div>
-								<div className='shadow-lg '>
-									<h3 className='text-2xl font-bold mb-2 text-gray-800 dark:text-gray-400'>
-										Shivam Nishad
-									</h3>
-									<p className='text-gray-700 dark:text-gray-300'>
-										Creative developer passionate about
-										building beautiful, functional, and
-										accessible web experiences.
-									</p>
-								</div>
-							</div>
-						</CardHeader>
-						<CardBody className='bg-transparent'>
-							<h3 className='text-xl font-bold mb-4 text-gray-800 dark:text-gray-400'>
-								Core Skills
-							</h3>
-							<div className=' grid grid-cols-1 grid-flow-row-dense  gap-2 mb-8'>
-								{skills.map((skill, index) => (
+							<CardBody className='space-y-8 bg-transparent text-gray-700 dark:text-gray-300 p-0'>
+								{experiences.map((exp, index) => (
 									<div
 										key={index}
-										className='flex items-center gap-3 bg-gray-100/50 dark:bg-gray-800/50 rounded-lg p-3 border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-400'>
-										<div className='bg-indigo-500/20 text-indigo-400 p-2 rounded-lg shrink-0'>
-											{skill.icon}
-										</div>
-										<span className='font-medium'>
-											{skill.name}
+										className='relative pl-8 border-l border-gray-300 dark:border-gray-800'>
+										<div className='absolute left-0 top-0 -translate-x-1/2 bg-indigo-600 w-4 h-4 rounded-full border-4 border-white dark:border-black'></div>
+										<span className='block text-indigo-600 dark:text-indigo-400 text-sm mb-1'>
+											{exp.year}
 										</span>
+										<h4 className='font-bold text-lg text-gray-800 dark:text-gray-200'>
+											{exp.position}
+										</h4>
+										<span className='text-gray-600 dark:text-gray-400 text-sm block mb-2'>
+											{exp.company}
+										</span>
+										<p className='text-gray-700 dark:text-gray-300'>
+											{exp.description}
+										</p>
 									</div>
 								))}
-							</div>
-						</CardBody>
+							</CardBody>
+						</Card>
+					</ScrollReveal>
 
-						<CardFooter className='bg-transparent'>
-							<h3 className='text-xl font-bold mb-4 text-gray-800 dark:text-gray-400'>
-								Technologies
-							</h3>
-							<div className='flex flex-wrap gap-2 mb-6'>
-								{[
-									"React",
-									"Javascript",
-									"Next.js",
-									"Node.js",
-									"Tailwind CSS",
-									"HTML/CSS",
-									"MongoDB",
-									"Git",
-								].map((tech, index) => (
-									<span
-										key={index}
-										className='bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 px-3 py-1 rounded-full text-sm cursor-pointer'>
-										{tech}
-									</span>
-								))}
-							</div>
-							<a href='#contact'>
-								<Button className='group flex items-center justify-center w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-indigo-500/25 cursor-pointer'>
-									Get In Touch
-									<ArrowRight
-										size={18}
-										className='ml-2 transform group-hover:translate-x-1 transition-transform'
-									/>
-								</Button>
-							</a>
-						</CardFooter>
-					</Card>
+					{/* Skills & Profile */}
+					<ScrollReveal delay={400} className="w-full">
+						<Card className="p-4 sm:p-6 bg-transparent rounded-2xl backdrop-blur-sm border border-gray-200 dark:border-gray-800">
+							<CardHeader className='bg-transparent p-0'>
+								<div className='flex flex-col md:flex-row md:items-center mb-8 gap-6'>
+									<div
+										className='w-24 h-24 rounded-full bg-linear-to-tr from-indigo-500 to-purple-600 p-1 shrink-0'
+										style={{
+											backgroundImage: "url(./IMG_2834.jpg)",
+											backgroundSize: "cover",
+											backgroundPosition: "center",
+										}}></div>
+									<div>
+										<h3 className='text-2xl font-bold mb-2 text-gray-800 dark:text-gray-400'>
+											Shivam Nishad
+										</h3>
+										<p className='text-gray-700 dark:text-gray-300'>
+											Creative developer passionate about
+											building beautiful, functional, and
+											accessible web experiences.
+										</p>
+									</div>
+								</div>
+							</CardHeader>
+							<CardBody className='bg-transparent p-0'>
+								<h3 className='text-xl font-bold mb-4 text-gray-800 dark:text-gray-400'>
+									Core Skills
+								</h3>
+								<div className=' grid grid-cols-1 grid-flow-row-dense  gap-2 mb-8'>
+									{skills.map((skill, index) => (
+										<div
+											key={index}
+											className='flex items-center gap-3 bg-gray-100/50 dark:bg-gray-800/50 rounded-lg p-3 border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-400'>
+											<div className='bg-indigo-500/20 text-indigo-400 p-2 rounded-lg shrink-0'>
+												{skill.icon}
+											</div>
+											<span className='font-medium'>
+												{skill.name}
+											</span>
+										</div>
+									))}
+								</div>
+							</CardBody>
+
+							<CardFooter className='bg-transparent p-0'>
+								<h3 className='text-xl font-bold mb-4 text-gray-800 dark:text-gray-400'>
+									Technologies
+								</h3>
+								<div className='flex flex-wrap gap-2 mb-6'>
+									{[
+										"React",
+										"Javascript",
+										"Next.js",
+										"Node.js",
+										"Tailwind CSS",
+										"HTML/CSS",
+										"MongoDB",
+										"Git",
+									].map((tech, index) => (
+										<span
+											key={index}
+											className='bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 px-3 py-1 rounded-full text-sm cursor-pointer'>
+											{tech}
+										</span>
+									))}
+								</div>
+								<a href='#contact'>
+									<Button className='group flex items-center justify-center w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-indigo-500/25 cursor-pointer'>
+										Get In Touch
+										<ArrowRight
+											size={18}
+											className='ml-2 transform group-hover:translate-x-1 transition-transform'
+										/>
+									</Button>
+								</a>
+							</CardFooter>
+						</Card>
+					</ScrollReveal>
 				</div>
 			</div>
 		</section>
