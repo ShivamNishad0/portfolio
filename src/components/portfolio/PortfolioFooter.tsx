@@ -48,7 +48,7 @@ function PortfolioFooter() {
 
 	return (
 		<footer
-			className={`relative w-full bg-white dark:bg-black text-black dark:text-white py-12 overflow-hidden transition-opacity duration-1000 `}>
+			className={`relative w-full bg-white dark:bg-black text-black dark:text-gray-100 py-12 overflow-hidden transition-colors duration-300 `}>
 			{/* Background gradient element */}
 			<div className='absolute bottom-0 left-1/4 w-64 h-64 bg-indigo-600 opacity-10 rounded-full blur-3xl pointer-events-none'></div>
 

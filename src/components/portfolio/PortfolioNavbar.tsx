@@ -59,7 +59,7 @@ function NavbarPortfolio() {
 
 	return (
 		<header
-			className={`w-full bg-transparent dark:bg-gray-900/50 fixed top-0 left-0 backdrop-blur-2xl shadow-md z-50 md:px-8`}>
+			className={`w-full bg-white/70 dark:bg-black/70 fixed top-0 left-0 backdrop-blur-2xl shadow-sm z-50 md:px-8 border-b border-gray-200/50 dark:border-gray-800/50 transition-colors duration-300`}>
 			{/* Desktop Navbar */}
 			<div className='max-w-3xl w-full xl:max-w-270 mx-auto px-2 sm:px-8 lg:px-10 py-4 flex justify-between items-center'>
 				{/* Logo and Links */}

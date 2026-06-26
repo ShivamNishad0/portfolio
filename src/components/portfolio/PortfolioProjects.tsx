@@ -92,7 +92,7 @@ function PortfolioProjects() {
 	return (
 		<section
 			id='projects'
-			className='bg-white dark:bg-black text-black dark:text-white py-16 md:py-24 lg:py-32 overflow-hidden relative'>
+			className='bg-white dark:bg-black text-black dark:text-gray-100 py-16 md:py-24 lg:py-32 overflow-hidden relative transition-colors duration-300'>
 			<div className='max-w-3xl w-full xl:max-w-270 mx-auto px-4 sm:px-6 lg:px-8'>
 				{/* Section Header */}
 				<div className='text-center mb-16'>
@@ -122,7 +122,7 @@ function PortfolioProjects() {
 					.map((project, index) => (
 					<Card
 						key={index}
-						className={`group relative rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-800 bg-gray-100/50 dark:bg-gray-900/50 backdrop-blur-sm transition-all duration-500 transform hover:border-indigo-500 h-full`}
+						className={`group relative rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50 backdrop-blur-sm transition-all duration-500 transform hover:border-indigo-500/50 h-full`}
 					>
 						<CardHeader className="aspect-video relative overflow-hidden bg-transparent h-64">
 						<img

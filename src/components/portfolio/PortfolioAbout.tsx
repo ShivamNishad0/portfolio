@@ -30,14 +30,28 @@ function PortfolioAbout() {
 
 	const experiences = [
 		{
-			year: "2025",
+			year: "Jun 2026 - present",
+			position: "Software Developer",
+			company: "Sparrow Softtech Pvt. Ltd.",
+			description:
+				"Developing and maintaining web applications using React.js and Flask, ensuring high-quality code and seamless user experience.",
+		},
+		{
+			year: "Jan 2026 - May 2026",
+			position: "Programmer Trainee",
+			company: "Sparrow Softtech Pvt. Ltd.",
+			description:
+				"Redesigned and upgraded the company’s existing job portal, implementing a modern UI, robust search functionality, and seamless job application workflow. This upgrade enhanced user engagement and streamlined the hiring process.",
+		},
+		{
+			year: "Aug 2025 - Dec 2025",
 			position: "Full Stack Developer Intern",
 			company: "SmartCard AI",
 			description:
 				"Designed and developed a responsive dashboard for SmartCard AI using React.js and Flask, providing users with a clear and interactive interface. The dashboard includes secure login, API-integrated data visualization, transaction tracking, and AI-driven insights for better decision-making.",
 		},
 		{
-			year: "June, 2024 - July, 2024",
+			year: "Jun 2024 - Jul 2024",
 			position: "Full Stack Developer Intern",
 			company: "Innobyte Services",
 			description:
@@ -62,7 +76,7 @@ function PortfolioAbout() {
 	return (
 		<section
 			id='about'
-			className='bg-white dark:bg-black text-black dark:text-white py-2 md:py-4 lg:py-8 overflow-hidden'>
+			className='bg-white dark:bg-black text-black dark:text-gray-100 py-2 md:py-4 lg:py-8 overflow-hidden transition-colors duration-300'>
 			<div className='max-w-3xl w-full xl:max-w-270  mx-auto px-4 sm:px-6 lg:px-8'>
 				{/* Section Header */}
 				<div className='text-center mb-16'>
@@ -87,11 +101,10 @@ function PortfolioAbout() {
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 place-items-center grid-flow-row'>
 					{/* Experience Timeline */}
 					<Card
-						className={`transition-all duration-1000 delay-300 transform bg-transparent text-gray-800 dark:text-gray-200 ${
-							isVisible
-								? "translate-x-0 opacity-100"
-								: "-translate-x-12 opacity-0"
-						}`}>
+						className={`transition-all duration-1000 delay-300 transform bg-transparent text-gray-800 dark:text-gray-100 ${isVisible
+							? "translate-x-0 opacity-100"
+							: "-translate-x-12 opacity-0"
+							}`}>
 						<CardHeader className='text-2xl font-bold mb-6 flex items-center bg-transparent text-gray-800 dark:text-gray-200 p-0'>
 							<span className='bg-indigo-500/20 text-indigo-400 p-2 rounded-lg mr-3'>
 								<Layers className='w-6 h-6' />
@@ -99,7 +112,7 @@ function PortfolioAbout() {
 							Education & Experience
 						</CardHeader>
 
-						<CardBody className='space-y-8 bg-transparent text-gray-200'>
+						<CardBody className='space-y-8 bg-transparent text-gray-700 dark:text-gray-300'>
 							{experiences.map((exp, index) => (
 								<div
 									key={index}
@@ -124,11 +137,10 @@ function PortfolioAbout() {
 
 					{/* Skills & Profile */}
 					<Card
-						className={`transition-all duration-1000 delay-500 transform p-2 bg-transparent rounded-2xl md:p-4 backdrop-blur-sm border border-gray-300 dark:border-gray-800 ${
-							isVisible
-								? "translate-x-0 opacity-100"
-								: "translate-x-12 opacity-0"
-						}`}>
+						className={`transition-all duration-1000 delay-500 transform p-2 bg-transparent rounded-2xl md:p-4 backdrop-blur-sm border border-gray-200 dark:border-gray-800 ${isVisible
+							? "translate-x-0 opacity-100"
+							: "translate-x-12 opacity-0"
+							}`}>
 						<CardHeader className='bg-transparent'>
 							<div className='flex flex-col md:flex-row md:items-center mb-8 gap-6'>
 								<div

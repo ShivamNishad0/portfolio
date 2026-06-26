@@ -54,7 +54,7 @@ function PortfolioSkills() {
 	return (
 		<section
 			id='skills'
-			className='w-full bg-white dark:bg-black text-black dark:text-white py-12 md:py-20 lg:py-24 overflow-hidden relative'>
+			className='w-full bg-white dark:bg-black text-black dark:text-gray-100 py-12 md:py-20 lg:py-24 overflow-hidden relative transition-colors duration-300'>
 			<div className='max-w-3xl w-full xl:max-w-270 mx-auto px-4 sm:px-6'>
 				<div
 					className={`w-full transition-all duration-1000 transform ${
@@ -78,7 +78,7 @@ function PortfolioSkills() {
 						{techCategories.map((category, index) => (
 							<Card
 								key={index}
-								className={`bg-gray-100 dark:bg-gray-900 bg-opacity-70 backdrop-blur-sm border border-gray-300 dark:border-gray-800 rounded-xl p-5 md:p-6 hover:border-indigo-500 transition-all duration-500 transform min-h-48 ${
+								className={`bg-gray-50 dark:bg-gray-900/50 backdrop-blur-sm border border-gray-200 dark:border-gray-800 rounded-xl p-5 md:p-6 hover:border-indigo-500/50 transition-all duration-500 transform min-h-48 ${
 									isVisible
 										? "translate-y-0 opacity-100"
 										: "translate-y-12 opacity-0"
