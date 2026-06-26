@@ -1,12 +1,6 @@
 import { useState, useEffect } from "react";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
-import {
-	Button,
-	Card,
-	CardBody,
-	CardFooter,
-	CardHeader,
-} from "@traken-ui/react";
+import { Button } from "@traken-ui/react";
 import "./styles/style.css";
 
 function PortfolioHero() {
@@ -51,28 +45,28 @@ function PortfolioHero() {
 		}
 
 		return () => clearTimeout(timeout);
-	}, [typedText, isDeleting, roleIndex]);
+	}, [typedText, isDeleting, roleIndex, roles]);
 
 	return (
 		<section
 			id='home'
-			className='relative flex  items-center justify-center w-full bg-white dark:bg-black text-black dark:text-white py-18 md:py-24 lg:py-32 overflow-hidden'>
-			<div className='max-w-[768px] w-full xl:max-w-[1080px] flex flex-col items-center md:flex-row md:items-start md:justify-center gap-8 md:gap-12 px-4 sm:px-6 z-10'>
+			className='relative flex items-center justify-center w-full bg-white dark:bg-black text-black dark:text-gray-100 py-18 md:py-24 lg:py-32 overflow-hidden transition-colors duration-300'>
+			<div className='max-w-3xl w-full xl:max-w-270 flex flex-col items-center md:flex-row md:items-start md:justify-center gap-8 md:gap-12 px-4 sm:px-6 z-10'>
 				{/* Left Content */}
-				<Card
+				<div
 					className={`w-full bg-transparent flex flex-col items-center md:items-start md:w-1/2 transition-all duration-1000 transform ${
 						isVisible
 							? "translate-x-0 opacity-100"
 							: "-translate-x-12 opacity-0"
 					}`}>
-					<CardHeader className='flex bg-transparent items-center justify-center md:justify-start w-full space-x-3 mb-4 md:mb-6 p-0'>
+					<div className='flex bg-transparent items-center justify-center md:justify-start w-full space-x-3 mb-4 md:mb-6 p-0'>
 						<div className='h-1 w-8 md:w-10 bg-indigo-500' />
 						<span className='text-indigo-400 uppercase text-xs md:text-sm tracking-widest font-medium'>
 							Portfolio
 						</span>
-					</CardHeader>
+					</div>
 
-					<CardBody className='flex flex-col items-center md:items-start w-full bg-transparent p-0'>
+					<div className='flex flex-col items-center md:items-start w-full bg-transparent p-0'>
 						<h1 className='text-center md:text-left w-full text-4xl text-gray-800 dark:text-gray-200 font-bold mb-3 md:mb-4 leading-tight'>
 							Hello, I'm Shivam Nishad
 							<span className='block mt-2 text-indigo-400'>
@@ -89,9 +83,9 @@ function PortfolioHero() {
 							projects—from dynamic social platforms to e-commerce
 							solutions and digital marketing tools.
 						</p>
-					</CardBody>
+					</div>
 
-					<CardFooter className='flex flex-col sm:justify-center md:justify-start sm:flex-row items-center  w-full gap-3 md:gap-4 bg-transparent p-0'>
+					<div className='flex flex-col flex-wrap sm:justify-center md:justify-start sm:flex-row items-center w-full gap-3 md:gap-4 bg-transparent p-0'>
 						<a href='./Resume.pdf' download='Shivam Nishad.pdf'>
 							<Button className='group flex items-center bg-indigo-600 hover:bg-indigo-700 text-white text-sm md:text-base font-medium py-3 px-4  rounded-md transition-all duration-300 shadow-lg hover:shadow-indigo-500/25 cursor-pointer'>
 								Download Resume
@@ -122,8 +116,8 @@ function PortfolioHero() {
 								<Mail size={18} className='md:w-5 md:h-5' />
 							</a>
 						</div>
-					</CardFooter>
-				</Card>
+					</div>
+				</div>
 
 				{/* Right Image */}
 				<div
@@ -133,7 +127,7 @@ function PortfolioHero() {
 							: "translate-y-12 opacity-0"
 					}`}>
 					<div className='relative w-100 h-100 mx-auto md:mx-0 md:ml-auto sm:mt-10'>
-						<div className='absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500'>
+						<div className='absolute inset-0 rounded-full bg-linear-to-tr from-indigo-500 via-purple-500 to-pink-500'>
 							<div className='absolute inset-1 rounded-full bg-white dark:bg-black flex items-center justify-center overflow-hidden'>
 								<div
 									className='w-full h-full rounded-full bg-cover bg-center'
@@ -146,17 +140,17 @@ function PortfolioHero() {
 						</div>
 
 						{/* Floating tags */}
-						<Button className='absolute top-0 right-0 bg-gray-100 dark:bg-gray-900 py-1 px-4 md:py-2 md:px-4 rounded-full shadow-lg border border-gray-300 dark:border-gray-800 animate-float cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 '>
+						<Button className='absolute top-0 right-0 bg-gray-100 dark:bg-gray-900 py-1 px-4 md:py-2 md:px-4 rounded-full shadow-lg border border-gray-300 dark:border-gray-800 animate-float cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200'>
 							<span className='text-xs md:text-sm font-medium '>
 								Full Stack Developer{" "}
 							</span>
 						</Button>
-						<Button className='absolute bottom-0 left-0 bg-gray-100 dark:bg-gray-900 py-1 px-4 md:py-2 md:px-6 rounded-full shadow-lg border border-gray-300 dark:border-gray-800 animate-float-delay cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 '>
+						<Button className='absolute bottom-0 left-0 bg-gray-100 dark:bg-gray-900 py-1 px-4 md:py-2 md:px-6 rounded-full shadow-lg border border-gray-300 dark:border-gray-800 animate-float-delay cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200'>
 							<span className='text-xs md:text-sm font-medium'>
 								Frontend
 							</span>
 						</Button>
-						<Button className='absolute bottom-0 right-0 bg-gray-100 dark:bg-gray-900 py-1 px-3 md:py-2 md:px-4 rounded-full shadow-lg border border-gray-300 dark:border-gray-800 animate-float-delay-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 '>
+						<Button className='absolute bottom-0 right-0 bg-gray-100 dark:bg-gray-900 py-1 px-3 md:py-2 md:px-4 rounded-full shadow-lg border border-gray-300 dark:border-gray-800 animate-float-delay-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-800 dark:text-gray-200'>
 							<span className='text-xs md:text-sm font-medium'>
 								Backend
 							</span>

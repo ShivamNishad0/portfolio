@@ -30,14 +30,28 @@ function PortfolioAbout() {
 
 	const experiences = [
 		{
-			year: "2025",
+			year: "Jun 2026 - present",
+			position: "Software Developer",
+			company: "Sparrow Softtech Pvt. Ltd.",
+			description:
+				"Developing and maintaining web applications using React.js and Flask, ensuring high-quality code and seamless user experience.",
+		},
+		{
+			year: "Jan 2026 - May 2026",
+			position: "Programmer Trainee",
+			company: "Sparrow Softtech Pvt. Ltd.",
+			description:
+				"Redesigned and upgraded the company’s existing job portal, implementing a modern UI, robust search functionality, and seamless job application workflow. This upgrade enhanced user engagement and streamlined the hiring process.",
+		},
+		{
+			year: "Aug 2025 - Dec 2025",
 			position: "Full Stack Developer Intern",
 			company: "SmartCard AI",
 			description:
 				"Designed and developed a responsive dashboard for SmartCard AI using React.js and Flask, providing users with a clear and interactive interface. The dashboard includes secure login, API-integrated data visualization, transaction tracking, and AI-driven insights for better decision-making.",
 		},
 		{
-			year: "June, 2024 - July, 2024",
+			year: "Jun 2024 - Jul 2024",
 			position: "Full Stack Developer Intern",
 			company: "Innobyte Services",
 			description:
@@ -48,7 +62,7 @@ function PortfolioAbout() {
 			position: "Master of Computer Applications",
 			company: "Pranveer Singh Institute of Technology",
 			description:
-				"Successfully completed a Master’s degree in Computer Applications, gaining in-depth knowledge of software development, data structures, algorithms, and database management systems.",
+				"Successfully completed a Master's degree in Computer Applications, gaining in-depth knowledge of software development, data structures, algorithms, and database management systems.",
 		},
 		{
 			year: "2020 - 2023",
@@ -62,8 +76,8 @@ function PortfolioAbout() {
 	return (
 		<section
 			id='about'
-			className='bg-white dark:bg-black text-black dark:text-white py-2 md:py-4 lg:py-8 overflow-hidden'>
-			<div className='max-w-[768px] w-full xl:max-w-[1080px]  mx-auto px-4 sm:px-6 lg:px-8'>
+			className='bg-white dark:bg-black text-black dark:text-gray-100 py-2 md:py-4 lg:py-8 overflow-hidden transition-colors duration-300'>
+			<div className='max-w-3xl w-full xl:max-w-270  mx-auto px-4 sm:px-6 lg:px-8'>
 				{/* Section Header */}
 				<div className='text-center mb-16'>
 					<div className='flex items-center justify-center space-x-3 mb-6'>
@@ -87,11 +101,10 @@ function PortfolioAbout() {
 				<div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 place-items-center grid-flow-row'>
 					{/* Experience Timeline */}
 					<Card
-						className={`transition-all duration-1000 delay-300 transform bg-transparent text-gray-800 dark:text-gray-200 ${
-							isVisible
-								? "translate-x-0 opacity-100"
-								: "-translate-x-12 opacity-0"
-						}`}>
+						className={`transition-all duration-1000 delay-300 transform bg-transparent text-gray-800 dark:text-gray-100 ${isVisible
+							? "translate-x-0 opacity-100"
+							: "-translate-x-12 opacity-0"
+							}`}>
 						<CardHeader className='text-2xl font-bold mb-6 flex items-center bg-transparent text-gray-800 dark:text-gray-200 p-0'>
 							<span className='bg-indigo-500/20 text-indigo-400 p-2 rounded-lg mr-3'>
 								<Layers className='w-6 h-6' />
@@ -99,7 +112,7 @@ function PortfolioAbout() {
 							Education & Experience
 						</CardHeader>
 
-						<CardBody className='space-y-8 bg-transparent text-gray-200'>
+						<CardBody className='space-y-8 bg-transparent text-gray-700 dark:text-gray-300'>
 							{experiences.map((exp, index) => (
 								<div
 									key={index}
@@ -124,15 +137,14 @@ function PortfolioAbout() {
 
 					{/* Skills & Profile */}
 					<Card
-						className={`transition-all duration-1000 delay-500 transform p-2 bg-transparent rounded-2xl md:p-4 backdrop-blur-sm border border-gray-300 dark:border-gray-800 ${
-							isVisible
-								? "translate-x-0 opacity-100"
-								: "translate-x-12 opacity-0"
-						}`}>
+						className={`transition-all duration-1000 delay-500 transform p-2 bg-transparent rounded-2xl md:p-4 backdrop-blur-sm border border-gray-200 dark:border-gray-800 ${isVisible
+							? "translate-x-0 opacity-100"
+							: "translate-x-12 opacity-0"
+							}`}>
 						<CardHeader className='bg-transparent'>
 							<div className='flex flex-col md:flex-row md:items-center mb-8 gap-6'>
 								<div
-									className='w-24 h-24 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-600 p-1 flex-shrink-0'
+									className='w-24 h-24 rounded-full bg-linear-to-tr from-indigo-500 to-purple-600 p-1 shrink-0'
 									style={{
 										backgroundImage: "url(./IMG_2834.jpg)",
 										backgroundSize: "cover",
@@ -159,7 +171,7 @@ function PortfolioAbout() {
 									<div
 										key={index}
 										className='flex items-center gap-3 bg-gray-100/50 dark:bg-gray-800/50 rounded-lg p-3 border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-400'>
-										<div className='bg-indigo-500/20 text-indigo-400 p-2 rounded-lg flex-shrink-0'>
+										<div className='bg-indigo-500/20 text-indigo-400 p-2 rounded-lg shrink-0'>
 											{skill.icon}
 										</div>
 										<span className='font-medium'>

@@ -105,8 +105,8 @@ function PortfolioContact() {
 	return (
 		<section
 			id='contact'
-			className='bg-white dark:bg-black text-black dark:text-white py-16 md:py-4 lg:py-8 overflow-hidden'>
-			<div className='max-w-[768px] w-full xl:max-w-[1080px]  mx-auto px-4 sm:px-6 lg:px-8'>
+			className='bg-white dark:bg-black text-black dark:text-gray-100 py-16 md:py-4 lg:py-8 overflow-hidden transition-colors duration-300'>
+			<div className='max-w-3xl w-full xl:max-w-270  mx-auto px-4 sm:px-6 lg:px-8'>
 				{/* Section Header */}
 				<div className='text-center mb-16'>
 					<div className='flex items-center justify-center space-x-3 mb-6'>
@@ -136,7 +136,7 @@ function PortfolioContact() {
 								? "translate-x-0 opacity-100"
 								: "-translate-x-12 opacity-0"
 						}`}>
-						<Card className='bg-gray-100/50 dark:bg-gray-900/50 backdrop-blur-sm border text-gray-800 dark:text-gray-200 border-gray-300 dark:border-gray-800 rounded-2xl p-6 md:p-8 h-full'>
+						<Card className='bg-gray-50 dark:bg-gray-900/50 backdrop-blur-sm border text-gray-800 dark:text-gray-200 border-gray-200 dark:border-gray-800 rounded-2xl p-6 md:p-8 h-full'>
 							<CardHeader className='p-0 bg-transparent text-gray-800 dark:text-gray-200'>
 								<h3 className='text-2xl font-bold mb-6'>
 									Contact Information
@@ -163,11 +163,11 @@ function PortfolioContact() {
 											{item.link ? (
 												<a
 													href={item.link}
-													className='text-gray-800 dark:text-white hover:text-indigo-400 transition-colors'>
+													className='text-gray-800 dark:text-gray-100 hover:text-indigo-400 transition-colors'>
 													{item.value}
 												</a>
 											) : (
-												<p className='text-gray-800 dark:text-white'>
+												<p className='text-gray-800 dark:text-gray-100'>
 													{item.value}
 												</p>
 											)}
@@ -201,7 +201,7 @@ function PortfolioContact() {
 
 					{/* Contact Form */}
 					<Card
-						className={`lg:col-span-3 transition-all backdrop-blur-sm   rounded-2xl duration-1000 border-gray-300 dark:border-gray-800 border delay-300 transform bg-transparent text-gray-800 dark:text-gray-200 ${
+						className={`lg:col-span-3 transition-all backdrop-blur-sm   rounded-2xl duration-1000 border-gray-200 dark:border-gray-800 border delay-300 transform bg-transparent text-gray-800 dark:text-gray-200 ${
 							isVisible
 								? "translate-x-0 opacity-100"
 								: "translate-x-12 opacity-0"
@@ -226,7 +226,7 @@ function PortfolioContact() {
 											value={formState.name}
 											onChange={handleChange}
 											required
-											className='w-full bg-gray-100/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all'
+											className='w-full bg-gray-100/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-gray-800 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all'
 											placeholder='John Doe'
 										/>
 									</div>
@@ -244,7 +244,7 @@ function PortfolioContact() {
 											value={formState.email}
 											onChange={handleChange}
 											required
-											className='w-full bg-gray-100/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all'
+											className='w-full bg-gray-100/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-gray-800 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all'
 											placeholder='john@example.com'
 										/>
 									</div>
@@ -263,7 +263,7 @@ function PortfolioContact() {
 										value={formState.subject}
 										onChange={handleChange}
 										required
-										className='w-full bg-gray-100/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all'
+										className='w-full bg-gray-100/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-gray-800 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all'
 										placeholder='Project Discussion'
 									/>
 								</div>
@@ -281,7 +281,7 @@ function PortfolioContact() {
 										onChange={handleChange}
 										required
 										rows={5}
-										className='w-full bg-gray-100/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-gray-800 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all resize-none'
+										className='w-full bg-gray-100/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 focus:border-indigo-500 rounded-lg py-3 px-4 text-gray-800 dark:text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 transition-all resize-none'
 										placeholder="Hello, I'd like to talk about..."></textarea>
 								</div>
 
