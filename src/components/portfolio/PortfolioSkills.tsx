@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import {
 	Code,
 	Terminal,
@@ -8,15 +7,9 @@ import {
 	Globe,
 } from "lucide-react";
 import { Card, CardBody, CardHeader } from "@traken-ui/react";
+import { ScrollReveal } from "./ScrollReveal";
 
 function PortfolioSkills() {
-	const [isVisible, setIsVisible] = useState(false);
-
-	useEffect(() => {
-		const timeout = setTimeout(() => setIsVisible(true), 500);
-		return () => clearTimeout(timeout);
-	}, []);
-
 	// Tech categories with their respective technologies
 	const techCategories = [
 		{
@@ -56,12 +49,7 @@ function PortfolioSkills() {
 			id='skills'
 			className='w-full bg-white dark:bg-black text-black dark:text-gray-100 py-12 md:py-20 lg:py-24 overflow-hidden relative transition-colors duration-300'>
 			<div className='max-w-3xl w-full xl:max-w-270 mx-auto px-4 sm:px-6'>
-				<div
-					className={`w-full transition-all duration-1000 transform ${
-						isVisible
-							? "translate-y-0 opacity-100"
-							: "translate-y-12 opacity-0"
-					}`}>
+				<ScrollReveal className='w-full'>
 					<div className='flex items-center justify-center md:justify-start w-full space-x-3 mb-6 md:mb-8'>
 						<div className='h-1 w-8 md:w-10 bg-indigo-500' />
 						<span className='text-indigo-400 uppercase text-xs md:text-sm tracking-widest font-medium'>
@@ -78,11 +66,8 @@ function PortfolioSkills() {
 						{techCategories.map((category, index) => (
 							<Card
 								key={index}
-								className={`bg-gray-50 dark:bg-gray-900/50 backdrop-blur-sm border border-gray-200 dark:border-gray-800 rounded-xl p-5 md:p-6 hover:border-indigo-500/50 transition-all duration-500 transform min-h-48 ${
-									isVisible
-										? "translate-y-0 opacity-100"
-										: "translate-y-12 opacity-0"
-								}`}>
+								className={`bg-gray-50 dark:bg-gray-900/50 backdrop-blur-sm border border-gray-200 dark:border-gray-800 rounded-xl p-5 md:p-6 hover:border-indigo-500/50 transition-all duration-500 transform min-h-48`}
+							>
 								<CardHeader className='bg-transparent border-0 shadow-none p-0'>
 									<div className='flex items-center mb-4'>
 										<div className='p-2 mr-3 text-gray-800 dark:text-gray-200 bg-gray-200 dark:bg-gray-800 rounded-lg'>
@@ -109,7 +94,7 @@ function PortfolioSkills() {
 							</Card>
 						))}
 					</div>
-				</div>
+				</ScrollReveal>
 
 				{/* Glowing orb background effects - improved positioning for responsiveness */}
 				<div className='absolute -top-40 right-0 md:-right-40 w-72 md:w-96 h-72 md:h-96 bg-indigo-600 opacity-5 rounded-full blur-3xl pointer-events-none'></div>
